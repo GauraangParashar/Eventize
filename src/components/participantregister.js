@@ -9,19 +9,17 @@ import {
   CForm,
   CFormGroup,
   CFormText,
-  CTextarea,
   CInput,
-  CInputFile,
   CLabel,
   CSelect,
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
 
-const EventRegister = () => {
+const ParticipantRegister = () => {
   return (
     <>
       <CCard>
-        <CCardHeader>Event Registration</CCardHeader>
+        <CCardHeader>Participant Registration</CCardHeader>
         <CCardBody>
           <CForm
             action=""
@@ -31,90 +29,68 @@ const EventRegister = () => {
           >
             <CFormGroup row>
               <CCol md="3">
-                <CLabel htmlFor="text-input">Event Name</CLabel>
+                <CLabel htmlFor="text-input">Name</CLabel>
               </CCol>
               <CCol xs="12" md="9">
-                <CInput
-                  id="text-input"
-                  name="text-input"
-                  placeholder="Event name"
-                />
-                <CFormText>Please be specific with event name</CFormText>
+                <CInput id="text-input" name="text-input" placeholder="Name" />
+                <CFormText>Please don't use nicknames</CFormText>
               </CCol>
             </CFormGroup>
             <CFormGroup row>
               <CCol md="3">
-                <CLabel htmlFor="text-input">Club name</CLabel>
+                <CLabel htmlFor="text-input">Father's name</CLabel>
               </CCol>
               <CCol xs="12" md="9">
                 <CInput
                   id="text-input"
                   name="text-input"
-                  placeholder="Club name"
+                  placeholder="Father's name"
                 />
-                <CFormText>Please write exact club name</CFormText>
+                <CFormText>Please don't use Shri, Mr., etc.</CFormText>
               </CCol>
             </CFormGroup>
 
             <CFormGroup row>
               <CCol md="3">
-                <CLabel htmlFor="date-input">Start Date</CLabel>
+                <CLabel htmlFor="date-input">Date of Birth</CLabel>
               </CCol>
               <CCol xs="12" md="9">
                 <CInput
                   type="date"
                   id="date-input"
                   name="date-input"
-                  placeholder="start date"
+                  placeholder="Date of Birth"
                 />
               </CCol>
             </CFormGroup>
             <CFormGroup row>
               <CCol md="3">
-                <CLabel htmlFor="date-input">End Date</CLabel>
-              </CCol>
-              <CCol xs="12" md="9">
-                <CInput
-                  type="date"
-                  id="date-input"
-                  name="date-input"
-                  placeholder="start date"
-                />
-              </CCol>
-            </CFormGroup>
-            <CFormGroup row>
-              <CCol md="3">
-                <CLabel htmlFor="textarea-input">Description</CLabel>
-              </CCol>
-              <CCol xs="12" md="9">
-                <CTextarea
-                  name="textarea-input"
-                  id="textarea-input"
-                  rows="9"
-                  placeholder="Description..."
-                />
-              </CCol>
-            </CFormGroup>
-            <CFormGroup row>
-              <CCol md="3">
-                <CLabel htmlFor="select">Team Size Allowed</CLabel>
+                <CLabel htmlFor="select">Course</CLabel>
               </CCol>
               <CCol xs="12" md="9">
                 <CSelect custom name="select" id="select">
                   <option value="0">Please select</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
+                  <option value="1">BTech</option>
+                  <option value="2">BCA</option>
+                  <option value="3">MCA</option>
+                  <option value="4">MBA</option>
+                  <option value="5">Hotel Management</option>
                 </CSelect>
               </CCol>
             </CFormGroup>
             <CFormGroup row>
-              <CLabel col md="3" htmlFor="file-input">
-                Poster
-              </CLabel>
+              <CCol md="3">
+                <CLabel htmlFor="text-input">Current Year</CLabel>
+              </CCol>
               <CCol xs="12" md="9">
-                <CInputFile id="file-input" name="file-input" />
+                <CInput
+                  id="text-input"
+                  name="text-input"
+                  placeholder="Current year"
+                />
+                <CFormText>
+                  Please use number only. For example - 1 or 2
+                </CFormText>
               </CCol>
             </CFormGroup>
           </CForm>
@@ -131,4 +107,4 @@ const EventRegister = () => {
     </>
   );
 };
-export default EventRegister;
+export default ParticipantRegister;

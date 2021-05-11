@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ParticipantRegister from "./components/participantregister";
+import EventPage from "./components/eventpage/eventpage";
 // import { HashRouter, Route, Switch } from 'react-router-dom';
 import "./scss/style.scss";
 
@@ -38,7 +38,7 @@ import "./scss/style.scss";
 // }
 class App extends Component {
   render() {
-    return <ParticipantRegister />;
+    return <EventPage />;
   }
 }
 

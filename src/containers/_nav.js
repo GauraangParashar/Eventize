@@ -29,14 +29,14 @@ const _nav = [
   },
   {
     _tag: "CSidebarNavItem",
-    name: "EventRegister",
-    to: "/eventregister",
+    name: "Event Register",
+    to: "/EventRegister",
     icon: "cil-pencil",
   },
   {
     _tag: "CSidebarNavItem",
-    name: "Edit Events",
-    to: "/components/EventRegister",
+    name: "Event Edit",
+    to: "/EventEdit",
     icon: "cil-pencil",
   },
   {

@@ -59,8 +59,8 @@ const Modals = React.lazy(() => import("./views/notifications/modals/Modals")); 
 /* const Widgets = React.lazy(() => import("./views/widgets/Widgets"));
 const Users = React.lazy(() => import("./views/users/Users"));
 const User = React.lazy(() => import("./views/users/User")); */
-const Dashboard = React.lazy(() => import("./views/dashboard/Dashboard"));
-const eventpage = React.lazy(() =>
+/* const Dashboard = React.lazy(() => import("./views/dashboard/Dashboard")); */
+const EventPage = React.lazy(() =>
   import("./views/components/eventpage/eventpage")
 );
 
@@ -70,13 +70,16 @@ const EventRegister = React.lazy(() =>
 const ParticipantRegister = React.lazy(() =>
   import("./views/components/participantregister")
 );
+const EventEdit = React.lazy(() =>
+  import("./views/components/eventedit/eventedit")
+);
 
 const routes = [
   {
     path: "/",
     exact: true,
     name: "Events",
-    component: eventpage,
+    component: EventPage,
   },
   /*   { path: "/dashboard", name: "Dashboard", component: Dashboard },
    */
@@ -138,14 +141,20 @@ const routes = [
   {
     path: "/EventRegister",
     exact: true,
-    name: "EventRegister",
+    name: "Event Register",
     component: EventRegister,
   },
   {
     path: "/ParticipantRegister",
     exact: true,
-    name: "ParticipantRegister",
+    name: "Participant Register",
     component: ParticipantRegister,
+  },
+  {
+    path: "/EventEdit",
+    exact: true,
+    name: "Event Edit",
+    component: EventEdit,
   },
 ];
 

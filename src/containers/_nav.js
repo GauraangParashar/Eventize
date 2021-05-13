@@ -12,6 +12,16 @@ const _nav = [
       text: "NEW",
     },
   },
+  {
+    _tag: "CSidebarNavItem",
+    name: "Feed",
+    to: "/feed",
+    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon" />,
+    badge: {
+      color: "info",
+      text: "NEW",
+    },
+  },
 
   {
     _tag: "CSidebarNavTitle",
@@ -19,8 +29,8 @@ const _nav = [
   },
   {
     _tag: "CSidebarNavItem",
-    name: "Add Event",
-    to: "/components/EventRegister",
+    name: "EventRegister",
+    to: "/eventregister",
     icon: "cil-pencil",
   },
   {
@@ -32,12 +42,6 @@ const _nav = [
   {
     _tag: "CSidebarNavTitle",
     _children: ["Live Events"],
-  },
-  {
-    _tag: "CSidebarNavItem",
-    name: "Feed",
-    to: "/components/EventRegister",
-    icon: "cil-pencil",
   },
 
   {
